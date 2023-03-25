@@ -11,11 +11,11 @@ import SwiftUI
 struct ButtonStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .frame(width: 40 ,height: 40)
+//            .frame(width: 40 ,height: 40)
             .background(.white)
             .foregroundColor(.gray)
-            .cornerRadius(20)
-            .shadow( color: Color(UIColor.lightGray),radius: 3)
+//            .cornerRadius(20)
+//            .shadow( color: Color(UIColor.lightGray),radius: 3)
     }
 }
 struct TweetCard: ViewModifier {

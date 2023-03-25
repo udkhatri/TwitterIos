@@ -29,43 +29,50 @@ struct TweetRowView: View {
                             .font(.caption)
                     }
                     // Tweet caption
-
+                    
                     Text("Grinding myself to shape better future")
                         .font(.subheadline)
                         .multilineTextAlignment(.leading)
+                    // action buttons
+                    HStack{
+                        Button {
+                            // action
+                        } label: {
+                            Image(systemName: "bubble.left")
+                        }
+                        .modifier(ButtonStyleModifier())
+                        Spacer()
+                        Button {
+                            // action
+                        } label: {
+                            Image(systemName: "arrow.2.squarepath")
+                        }
+                        .modifier(ButtonStyleModifier())
+                        Spacer()
+                        Button {
+                            // action
+                        } label: {
+                            Image(systemName: "heart")
+                        }
+                        .modifier(ButtonStyleModifier())
+                        Spacer()
+                        Button {
+                            // action
+                        } label: {
+                            Image(systemName: "bookmark")
+                        }
+                        .modifier(ButtonStyleModifier())
+                    }
+                    .padding(.trailing)
+                    .padding(.top)
                 }
             }
-            // action buttons
-            HStack{
-                Button {
-                    // action
-                } label: {
-                    Image(systemName: "bubble.left")
-                }
-                .modifier(ButtonStyleModifier())
-                Spacer()
-                Button {
-                    // action
-                } label: {
-                    Image(systemName: "arrow.2.squarepath")
-                }
-                .modifier(ButtonStyleModifier())
-                Spacer()
-                Button {
-                    // action
-                } label: {
-                    Image(systemName: "heart")
-                }
-                .modifier(ButtonStyleModifier())
-                Spacer()
-                Button {
-                    // action
-                } label: {
-                    Image(systemName: "bookmark")
-                }
-                .modifier(ButtonStyleModifier())
-            }.padding(.horizontal).padding(.top)
-        }.padding()
+           
+            
+        }
+        .padding()
+        .cornerRadius(20)
+        
     }
 }
 
