@@ -8,29 +8,26 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @State var Search = ""
     var body: some View {
         NavigationView {
             VStack{
-                ScrollView {
-                    LazyVStack{
-                        ForEach(0 ... 30, id: \.self){ _ in
-                            NavigationLink {
-                                ProfileView()
-                                
-                            } label: {
-                                VStack{
-                                    UserRowView()
-                                    Divider()
-                                }
-                               
-                            }
+                List{
+                    ForEach(0 ... 30, id: \.self){ _ in
+                        NavigationLink {
+                            ProfileView()
                             
+                        } label: {
+                            VStack{
+                                UserRowView()
+                            }
                         }
                     }
-                }
+                }.listStyle(.plain)
+                
             }
             .navigationTitle("Explore")
-            
+            .searchable(text: $Search)
         }
    
     }
